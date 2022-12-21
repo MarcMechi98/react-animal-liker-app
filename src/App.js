@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import Animal from './Animal';
+import { useState } from 'react';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [count, setCount] = useState(0);
+
+    const handleClick = () => {
+        setCount(count + 1);
+    }
+
+    return (
+        <div>
+            <button onClick={handleClick}>Add Animal</button>
+            <div>
+                Number of animals: {count}
+            </div>
+
+            {/* <Animal alt='image of a cow' type='cow' />
+            <Animal alt='image of a bird' type='bird' />
+            <Animal alt='image of a horse' type='horse' /> */}
+        </div>
+    )
 }
 
+// Exporting the App component
 export default App;
