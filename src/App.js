@@ -1,26 +1,27 @@
 import Animal from './Animal';
 import { useState } from 'react';
 
+const getRandomAnimal = () => {
+    const animals = ['bird', 'cat', 'cow', 'gator', 'horse'];
+    return animals[Math.floor(Math.random() * animals.length)];
+}
+
 function App() {
-    const [count, setCount] = useState(0);
+    const [animals, setAnimals] = useState([]);
 
     const handleClick = () => {
-        setCount(count + 1);
+        // setAnimals(animals.push(getRandomAnimal()));
+        // Nao posso usar push pq MODIFICA UM PIECE OF STATE
+        setAnimals([...animals, getRandomAnimal()]);
     }
 
     return (
         <div>
             <button onClick={handleClick}>Add Animal</button>
-            <div>
-                Number of animals: {count}
-            </div>
+            <div>{animals}</div>
 
-            {/* <Animal alt='image of a cow' type='cow' />
-            <Animal alt='image of a bird' type='bird' />
-            <Animal alt='image of a horse' type='horse' /> */}
         </div>
     )
 }
 
-// Exporting the App component
 export default App;
