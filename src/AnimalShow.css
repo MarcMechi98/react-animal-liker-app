@@ -1,10 +1,10 @@
 .animal-show {
     position: relative;
-    border: 1px solid lightgray;
     padding: 10px;
     border-radius: .6rem;
     margin: 10px;
-    box-shadow: 0 3px 4px lightgray;
+    box-shadow: 0 3px 4px #68CA68;
+    background-color: #D9F3D8;
 }
 
 .animal {

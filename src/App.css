@@ -1,3 +1,7 @@
+body {
+    background-color: #B3E6B2;
+}
+
 .app {
     display: flex;
     flex-direction: column;
@@ -5,17 +9,22 @@
 }
 
 button {
-    background-color: lightgreen;
-    border: 1px solid green;
+    background-color: #44BC43;
+    color: whitesmoke;
+    border-style: none;
     border-radius: .6rem;
     font-size: 1.2rem;
     padding: .6rem;
     width: 20%;
     margin: 20px 0 15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    transition: .2s;
 }
 
 button:hover {
     cursor: pointer;
+    width: 23%;
 }
 
 @media (max-width: 791px) {

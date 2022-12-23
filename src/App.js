@@ -11,8 +11,6 @@ function App() {
     const [animals, setAnimals] = useState([]);
 
     const handleClick = () => {
-        // setAnimals(animals.push(getRandomAnimal()));
-        // Nao posso usar push pq MODIFICA UM PIECE OF STATE
         setAnimals([...animals, getRandomAnimal()]);
     }
 

@@ -9,8 +9,6 @@ import horse from './svg/horse.svg';
 import { useState } from 'react';
 
 const svgMap = {
-    // bird: bird,
-    // cat: cat,
     bird,
     cat,
     cow,
